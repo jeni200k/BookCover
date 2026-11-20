@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Roadmap to Success</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #eeeeee;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .book {
+            width: 500px;
+            min-height: 850px;
+            background: linear-gradient(135deg, #3186d2, #0756a8);
+            color: white;
+            padding: 35px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 5px 10px 20px #999;
+        }
+
+        .plane {
+            position: absolute;
+            font-size: 65px;
+        }
+
+        .plane1 {
+            top: 65px;
+            right: 35px;
+            transform: rotate(25deg);
+        }
+
+        .plane2 {
+            top: 100px;
+            left: 15px;
+            transform: rotate(-25deg);
+        }
+
+        .heading {
+            text-align: center;
+            margin-top: 55px;
+        }
+
+        .heading h2 {
+            font-size: 32px;
+            letter-spacing: 2px;
+        }
+
+        .heading h1 {
+            font-size: 65px;
+            margin-top: 10px;
+        }
+
+        .line {
+            border-top: 3px dashed white;
+            margin: 15px 60px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.5;
+            margin-top: 20px;
+        }
+
+        .quote {
+            color: #e5ed9d;
+            font-style: italic;
+            text-align: center;
+            font-size: 17px;
+            line-height: 1.8;
+            margin-top: 50px;
+        }
+
+        .description {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-top: 55px;
+            text-align: justify;
+        }
+
+        .question {
+            font-size: 19px;
+            font-weight: bold;
+            margin-top: 55px;
+        }
+
+        .barcode {
+            position: absolute;
+            right: 30px;
+            bottom: 95px;
+            width: 155px;
+            height: 65px;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .bars {
+            height: 38px;
+            background: repeating-linear-gradient(
+                90deg,
+                black 0px,
+                black 2px,
+                white 2px,
+                white 4px,
+                black 4px,
+                black 5px,
+                white 5px,
+                white 8px
+            );
+        }
+
+        .barcode p {
+            color: black;
+            font-size: 9px;
+            text-align: center;
+        }
+
+        .clouds {
+            position: absolute;
+            bottom: -60px;
+            left: -20px;
+            width: 540px;
+            height: 130px;
+            background: white;
+            border-radius: 50% 50% 0 0;
+        }
+
+        .clouds::before {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 130px;
+            background: white;
+            border-radius: 50%;
+            top: -55px;
+            left: 80px;
+        }
+
+        .clouds::after {
+            content: "";
+            position: absolute;
+            width: 170px;
+            height: 130px;
+            background: white;
+            border-radius: 50%;
+            top: -45px;
+            left: 250px;
+        }
+
+        @media (max-width: 550px) {
+            .book {
+                width: 100%;
+                min-height: 850px;
+                padding: 25px;
+            }
+
+            .heading h1 {
+                font-size: 45px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="book">
+
+    <div class="plane plane1">✈</div>
+    <div class="plane plane2">✈</div>
+
+    <div class="heading">
+        <h2>THE ROADMAP</h2>
+        <div class="line"></div>
+        <h1>SUCCESS</h1>
+    </div>
+
+    <p class="subtitle">
+        Navigate your journey to achievement
+        with clarity and strategy
+    </p>
+
+    <div class="quote">
+        "SUCCESS IS NOT A DESTINATION,
+        BUT A JOURNEY OF CONSISTENT
+        EFFORT AND SMART DECISIONS."
+    </div>
+
+    <div class="description">
+        Success isn't luck—it's built step by
+        step. This book gives you a clear
+        roadmap to set goals, stay productive,
+        and overcome challenges. Learn the
+        strategies successful people use to
+        turn dreams into reality.
+    </div>
+
+    <div class="question">
+        Are You Ready To Take The First Step?
+    </div>
+
+    <div class="barcode">
+        <div class="bars"></div>
+        <p>abcdef1234567</p>
+    </div>
+
+    <div class="clouds"></div>
+
+</div>
+
+</body>
+</html>
