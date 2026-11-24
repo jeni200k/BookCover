@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAFFORN & HEARTH</title>
+  <link rel="stylesheet" href="/static/restaurant/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home">SAFFORN <span>&amp;</span> HEARTH</a>
+
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#administration">Administration</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">FRESH FLAVOURS · WARM HOSPITALITY</p>
+        <h2>WHERE EVERY MEALS HAS A STORY.</h2>
+        <p>From the first sizzle to the last sweet bite, Saffron &amp; Hearth turns fresh, local flavours into moments worth sharing.</p>
+        <a class="button" href="#menu">Explore our menu</a>
+      </div>
+
+      <div class="hero-art">
+        <div class="plate">✿</div>
+        <span class="caption">Made fresh, shared happily</span>
+      </div>
+    </section>
+
+    <section class="welcome">
+      <p class="eyebrow">WELCOME TO SAFFORN &amp; HEARTH</p>
+      <h2>Good food brings us together.</h2>
+      <p>Join us for comforting favourites and seasonal dishes prepared with care.</p>
+    </section>
+
+    <section id="menu" class="section">
+      <div class="section-title">
+        <p class="eyebrow">FROM OUR KITCHEN</p>
+        <h2>Our Menu</h2>
+        <p>Freshly prepared favourites. Prices are in INR.</p>
+      </div>
+
+      <div class="menu-grid">
+        {% for item in menu_items %}
+          <article class="menu-item">
+            <img class="food-photo" src="{{ item.image }}" alt="{{ item.name }}">
+            <div class="food-details">
+              <h3>{{ item.name }}</h3>
+              <p>{{ item.description }}</p>
+            </div>
+            <strong>₹{{ item.price }}</strong>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section id="administration" class="section team-section">
+      <div class="section-title">
+        <p class="eyebrow">THE PEOPLE BEHIND THE TABLE</p>
+        <h2>Administration</h2>
+        <p>Meet the team that makes every visit special.</p>
+      </div>
+
+      <div class="team-grid">
+        {% for person in staff %}
+          <article class="person">
+            
+            <h3>{{ person.name }}</h3>
+            <p>{{ person.role }}</p>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="section-title">
+        <p class="eyebrow">WE'D LOVE TO HEAR FROM YOU</p>
+        <h2>Contact Us</h2>
+      </div>
+
+      <div class="contact-card">
+        <div>
+          <h3>Visit</h3>
+          <p>12 Garden Street<br>Chennai, Tamil Nadu 600 001</p>
+        </div>
+        <div>
+          <h3>Call</h3>
+          <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+        </div>
+        <div>
+          <h3>Email</h3>
+          <p><a href=":jenifer@example.com">hello@example.com</a></p>
+        </div>
+        <div>
+          <h3>Hours</h3>
+          <p>Daily<br>11:00 AM–10:00 PM</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#home">SAFFORN <span>&amp;</span> HEARTH</a>
+    <p>Good food. Good company. Made with care.</p>
+    <p class="copyright">© 2026 SAFFORN & HEARTH · JENIFER J</p>
+  </footer>
+</body>
+</html>

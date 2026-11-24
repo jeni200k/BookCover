@@ -1,0 +1,330 @@
+:root {
+  --cream: #e60d0d;
+  --paper: #e2a714;
+  --olive: #634457;
+  --olive-dark: #35402e;
+  --rust: #b63d3d;
+  --ink: #292a23;
+  --muted: #74756b;
+  --line: #d3e7d9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+.topbar {
+  min-height: 76px;
+  padding: 16px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  color: var(--olive-dark);
+  font: bold 1.45rem Georgia, "Times New Roman", serif;
+  text-decoration: none;
+}
+
+.brand span {
+  color: var(--rust);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+nav a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--rust);
+}
+
+.hero {
+  min-height: 450px;
+  padding: 60px 9%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 45px;
+  background: var(--cream);
+}
+
+.hero h1 {
+  margin: 10px 0;
+  color: var(--olive-dark);
+  font: bold clamp(2.8rem, 6vw, 5rem)/1.04 Georgia, "Times New Roman", serif;
+}
+
+.hero-copy > p:not(.eyebrow) {
+  max-width: 440px;
+  color: var(--muted);
+}
+
+.eyebrow {
+  color: var(--rust);
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 11px 20px;
+  border-radius: 4px;
+  color: white;
+  background: var(--olive);
+  text-decoration: none;
+}
+
+.button:hover {
+  background: var(--olive-dark);
+}
+
+.hero-art {
+  min-height: 290px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  border-radius: 48% 48% 8px 8px;
+  background: linear-gradient(145deg, #ddc49d, #a9ad82);
+}
+
+.plate {
+  width: 190px;
+  height: 190px;
+  display: grid;
+  place-items: center;
+  border: 14px solid #fff9ed;
+  border-radius: 50%;
+  color: var(--rust);
+  background: #d98b58;
+  box-shadow: 0 16px 36px #38402b33;
+  font-size: 5rem;
+}
+
+.caption {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: var(--olive-dark);
+  background: #fff9ed;
+  font-size: 0.8rem;
+}
+
+.welcome,
+.section {
+  padding: 70px 8%;
+}
+
+.welcome {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+}
+
+.welcome h2,
+.section-title h2 {
+  margin: 4px 0 10px;
+  color: var(--olive-dark);
+  font: bold clamp(2rem, 4vw, 3rem) Georgia, "Times New Roman", serif;
+}
+
+.welcome p:last-child,
+.section-title p:last-child {
+  color: var(--muted);
+}
+
+.section-title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.menu-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.menu-item {
+  min-width: 0;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:#f7e6fa ;
+}
+
+.food-photo {
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.food-details {
+  flex: 1;
+}
+
+.food-details h3,
+.food-details p {
+  margin: 0;
+}
+
+.food-details h3,
+.person h3,
+.contact-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.food-details p,
+.person p,
+.contact-card p {
+  color: var(--muted);
+}
+
+.menu-item strong {
+  color: var(--rust);
+  white-space: nowrap;
+}
+
+.team-section {
+  background: var(--cream);
+}
+
+.team-grid {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  text-align: center;
+}
+
+.staff-photo {
+  width: 115px;
+  height: 115px;
+  object-fit: cover;
+  border: 5px solid white;
+  border-radius: 50%;
+  box-shadow: 0 4px 14px #25251b1c;
+}
+
+.person h3 {
+  margin: 10px 0 0;
+}
+
+.person p {
+  margin: 2px 0;
+}
+
+.contact-section {
+  background: var(--paper);
+}
+
+.contact-card {
+  max-width: 950px;
+  margin: auto;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+}
+
+.contact-card h3,
+.contact-card p {
+  margin: 0;
+}
+
+.contact-card a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  color: var(--rust);
+}
+
+footer {
+  padding: 32px 8%;
+  color: var(--cream);
+  background: var(--olive-dark);
+  text-align: center;
+}
+
+.footer-brand {
+  color: white;
+}
+
+footer p {
+  margin: 8px 0;
+}
+
+.copyright {
+  font-size: 0.85rem;
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  nav {
+    gap: 10px 16px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-grid,
+  .contact-card {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .food-photo {
+    width: 78px;
+    height: 76px;
+  }
+}
